@@ -2,8 +2,11 @@
 
 # Deploy Influx DB
 https://hub.docker.com/_/influxdb/
+
 Using this Image
+
 Running the container
+
 The InfluxDB image exposes a shared volume under /var/lib/influxdb, so you can mount a host directory to that point to access persisted container data. A typical invocation of the container might be:
 
 $ docker run -p 8086:8086 \
@@ -30,12 +33,15 @@ The administrator interface is deprecated as of 1.1.0 and will be removed in 1.3
 
 
 # Grafana Docker
+
 http://docs.grafana.org/installation/docker/#grafana-container-with-persistent-storage-recommended
+
 
 create a persistent volume for your data in /var/lib/grafana (database and plugins)
 docker volume create grafana-storage
 
 start grafana
+
 docker run \
   -d \
   -p 3000:3000 \
